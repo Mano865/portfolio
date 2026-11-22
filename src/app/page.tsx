@@ -179,7 +179,7 @@ export default function Home() {
                   Projects
                 </h2>
                 <p className="text-sm text-[var(--muted)]">
-                  Deep learning, NLP, and signal-processing work
+                  Computer vision, NLP, deep learning, and cross-platform AI apps
                 </p>
               </div>
             </SectionReveal>
@@ -347,7 +347,7 @@ export default function Home() {
                     Skills
                   </h2>
                   <p className="mt-2 text-sm text-[var(--muted)]">
-                    Technical stack, ML focus, and languages
+                    AI/ML, mobile &amp; web development, cloud, and languages
                   </p>
                 </div>
 

@@ -32,7 +32,7 @@ const SECTION_MOODS: Record<SectionKey, SectionMood> = {
   },
   projects: {
     label: "Projects",
-    caption: "5 ML & NLP systems",
+    caption: "6 AI, ML & NLP systems",
     accent: "#8fa8bf",
   },
   experience: {

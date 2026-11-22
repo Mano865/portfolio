@@ -62,9 +62,9 @@ export const PORTFOLIO = {
   },
 
   about: {
-    lead: "Hands-on experience building and fine-tuning machine learning and deep learning models in Python, with a focus on NLP and generative AI.",
+    lead: "Hands-on experience building and fine-tuning machine learning and deep learning models in Python, with a focus on NLP, computer vision, and generative AI.",
     body: [
-      "My work spans the full ML workflow—from data preprocessing and feature engineering to metaheuristic hyperparameter tuning and systematic model evaluation across translation, text classification, medical image segmentation, and audio signal processing.",
+      "My work spans the full ML workflow—from data preprocessing, feature engineering, and vision/NLP model fine-tuning to metaheuristic hyperparameter tuning, systematic evaluation, and cross-platform deployment across crop disease detection, translation, text classification, medical image segmentation, and audio signal processing.",
       "I am currently pursuing a B.Sc. in AI Engineering at New Ismailia National University and seeking to apply strong technical fundamentals and a continuous-learning mindset to a growing AI/ML team.",
     ],
     softSkills: [
@@ -92,6 +92,34 @@ export const PORTFOLIO = {
   },
 
   projects: [
+    {
+      slug: "agrisense-smart-agriculture",
+      title: "AgriSense — Smart Agriculture & Crop Disease Detection",
+      year: "2026",
+      problem:
+        "Farmers and researchers need a single, accessible cross-platform tool to detect plant diseases—including Fall Armyworm (FAW)—and monitor crop trends and local weather conditions.",
+      solution:
+        "Built a cross-platform Flutter/Dart app (Android, iOS, and Web) powered by EfficientNet-B4 (PyTorch) extended to 39 crop disease classes including FAW, with a 7-day crop/FAW trend chart, Open-Meteo weather and geolocation card supporting farmer and researcher modes, chat with photo/voice uploads via Supabase Storage, Firebase Auth (email/password & Google Sign-In), and full security audit fixes.",
+      result:
+        "Delivered a unified mobile and web smart agriculture platform combining 39-class AI crop disease detection, live weather and 7-day FAW trend tracking, multimodal chat, and audited authentication.",
+      stack: [
+        "Flutter",
+        "Dart",
+        "EfficientNet-B4 (PyTorch)",
+        "Firebase Auth",
+        "Google Sign-In",
+        "Supabase Storage",
+        "Open-Meteo API",
+        "Google Colab",
+      ],
+      // TODO: Add AgriSense GitHub repository URL and live Web demo URL
+      repoUrl: null,
+      liveUrl: null,
+      coverImage: "/projects/agrisense.webp",
+      imageTodo: "Custom AgriSense mobile + web mockup cover with official logo",
+      metricsTodo: "TODO: Add GitHub repo / live demo links and test accuracy metrics",
+      accentTone: "#52A856",
+    },
     {
       slug: "brain-tumor-segmentation-unet-pso",
       title: "Brain Tumor Segmentation using U-Net and PSO",
@@ -226,13 +254,15 @@ export const PORTFOLIO = {
   skills: [
     {
       category: "Programming Languages",
-      items: ["Python", "SQL", "C++", "C"],
+      items: ["Python", "Dart", "SQL", "C++", "C"],
     },
     {
       category: "Libraries & Frameworks",
       items: [
+        "PyTorch",
         "TensorFlow",
         "Keras",
+        "Flutter",
         "Pandas",
         "NumPy",
         "Matplotlib",
@@ -241,10 +271,13 @@ export const PORTFOLIO = {
       ],
     },
     {
-      category: "Machine Learning",
+      category: "Machine Learning & Computer Vision",
       items: [
         "Supervised Learning",
         "Deep Learning",
+        "Computer Vision",
+        "EfficientNet-B4 Fine-Tuning",
+        "FAW Class Extension (39 Classes)",
         "Time-Series Forecasting",
         "Metaheuristic Optimization",
       ],
@@ -260,8 +293,27 @@ export const PORTFOLIO = {
       ],
     },
     {
+      category: "Mobile & Web Development",
+      items: [
+        "Mobile App Development (Android & iOS)",
+        "Flutter Web",
+        "State Management & App Architecture",
+        "REST APIs & Open-Meteo Integration",
+        "Geolocation Services",
+      ],
+    },
+    {
+      category: "Backend, Cloud & Security",
+      items: [
+        "Firebase Auth",
+        "Google Sign-In",
+        "Supabase Storage",
+        "Security Auditing & Fixes",
+      ],
+    },
+    {
       category: "Tools & Platforms",
-      items: ["Jupyter", "Google Colab", "Git / GitHub", "Microsoft Azure ML"],
+      items: ["Google Colab", "Jupyter", "Git / GitHub", "Microsoft Azure ML"],
     },
     {
       category: "Languages",

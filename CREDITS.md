@@ -4,6 +4,7 @@ All project card cover images in `public/projects/` are **decorative covers** (n
 
 | Local File | Project Card | Source URL | Author | License |
 | :--- | :--- | :--- | :--- | :--- |
+| `public/projects/agrisense.webp` | AgriSense — Smart Agriculture & Crop Disease Detection | Original project cover mockup incorporating the user's AgriSense logo | Custom generated for portfolio | Project asset |
 | `public/projects/brain-tumor-segmentation.webp` | Brain Tumor Segmentation using U-Net and PSO | https://www.pexels.com/photo/mri-images-of-the-brain-5723883/ | cottonbro studio | [Pexels License](https://www.pexels.com/license/) |
 | `public/projects/machine-translation.webp` | Machine Translation: English to Egyptian Arabic | https://www.pexels.com/photo/open-decorative-book-with-arabic-script-against-a-black-background-13208790/ | Enes Salih Gökçek | [Pexels License](https://www.pexels.com/license/) |
 | `public/projects/sms-spam-detection.webp` | SMS Spam Detection with Grey Wolf Optimizer (GWO) | https://www.pexels.com/photo/close-up-view-of-system-hacking-5380792/ | Tima Miroshnichenko | [Pexels License](https://www.pexels.com/license/) |
