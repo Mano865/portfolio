@@ -45,6 +45,10 @@ export const PORTFOLIO = {
   shortName: "Mohamed Elhosiny",
   role: "Aspiring AI Engineer | NLP & Generative AI",
   email: "mohamedsaidelhosiny@gmail.com",
+  phone: "01225578877",
+  location: "10th of Ramadan City, Egypt",
+  locationMapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=10th+of+Ramadan+City%2C+Egypt",
   githubUrl: "https://github.com/Mano865",
   linkedinUrl: "https://linkedin.com/in/mohamed-elhosiny-54a219322",
 

@@ -4,6 +4,8 @@ import "lenis/dist/lenis.css";
 import { ReactLenis, type LenisRef } from "lenis/react";
 import { MotionConfig, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { AiMascot } from "@/components/ai-mascot";
+import { AiNeuralBackground } from "@/components/ai-neural-background";
 import { GsapTransitionsProvider } from "@/components/gsap-transitions";
 
 export function Providers({ children }: { children: ReactNode }) {
@@ -18,6 +20,7 @@ export function Providers({ children }: { children: ReactNode }) {
 
   return (
     <MotionConfig reducedMotion="user">
+      <AiNeuralBackground />
       {mounted && !prefersReducedMotion ? (
         <ReactLenis
           ref={lenisRef}
@@ -31,8 +34,11 @@ export function Providers({ children }: { children: ReactNode }) {
         />
       ) : null}
       <GsapTransitionsProvider lenisRef={lenisRef} ready={mounted}>
-        {children}
+        <div className="relative z-10 flex min-h-full flex-1 flex-col">
+          {children}
+        </div>
       </GsapTransitionsProvider>
+      <AiMascot />
     </MotionConfig>
   );
 }

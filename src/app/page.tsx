@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CopyButton } from "@/components/copy-button";
 import { TextScrub } from "@/components/gsap-transitions";
 import {
   HeroAccentRule,
@@ -427,19 +428,98 @@ export default function Home() {
                     Open to AI/ML engineering roles, internships, and technical
                     collaborations in NLP and generative AI.
                   </p>
-                  <div className="flex flex-wrap items-center gap-5 pt-2">
-                    <MotionLinkButton
-                      href={`mailto:${PORTFOLIO.email}`}
-                      className="group inline-flex items-center gap-2 rounded-md bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-[var(--accent-ink)] transition-opacity hover:opacity-92"
+                  <div className="flex flex-wrap items-center gap-3 pt-2">
+                    <div className="inline-flex max-w-full items-center gap-1.5">
+                      <MotionLinkButton
+                        href={`mailto:${PORTFOLIO.email}`}
+                        className="group inline-flex h-10 min-w-0 items-center gap-1.5 rounded-md bg-[var(--accent)] px-3 text-xs font-medium text-[var(--accent-ink)] transition-opacity hover:opacity-92 sm:gap-2 sm:px-5 sm:text-sm"
+                      >
+                        <span className="truncate">{PORTFOLIO.email}</span>
+                        <span
+                          aria-hidden="true"
+                          className="inline-block shrink-0 transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5 group-focus-visible:translate-x-0.5 motion-reduce:transition-none"
+                        >
+                          →
+                        </span>
+                      </MotionLinkButton>
+                      <CopyButton
+                        value={PORTFOLIO.email}
+                        label="email address"
+                      />
+                    </div>
+
+                    <div className="inline-flex items-center gap-1.5">
+                      <a
+                        href={`tel:${PORTFOLIO.phone}`}
+                        className="inline-flex h-10 items-center gap-2 rounded-md border border-[var(--border)] bg-[var(--bg)]/70 px-3.5 text-sm font-medium text-[var(--text)] tabular-nums transition-colors duration-200 hover:border-[var(--muted)]/60 hover:bg-[var(--surface-hover)]"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          className="h-3.5 w-3.5 shrink-0 text-[var(--accent)]"
+                        >
+                          <path
+                            d="M3.2 2.5h2.2c.35 0 .66.24.74.58l.55 2.2c.07.3-.04.62-.29.8l-1.15.86a8.6 8.6 0 0 0 3.81 3.81l.86-1.15c.18-.25.5-.36.8-.29l2.2.55c.34.08.58.39.58.74v2.2c0 .44-.36.8-.8.78C7.02 13.3 2.7 8.98 2.42 3.3a.78.78 0 0 1 .78-.8Z"
+                            stroke="currentColor"
+                            strokeWidth="1.35"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        <span>{PORTFOLIO.phone}</span>
+                      </a>
+                      <CopyButton
+                        value={PORTFOLIO.phone}
+                        label="phone number"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-x-5 gap-y-2.5 pt-1">
+                    <a
+                      href={PORTFOLIO.locationMapsUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group inline-flex items-center gap-1.5 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)]"
                     >
-                      <span>{PORTFOLIO.email}</span>
+                      <svg
+                        aria-hidden="true"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        className="h-3.5 w-3.5 shrink-0 text-[var(--accent)]"
+                      >
+                        <path
+                          d="M8 14s4.5-4.15 4.5-7.5a4.5 4.5 0 1 0-9 0C3.5 9.85 8 14 8 14Z"
+                          stroke="currentColor"
+                          strokeWidth="1.35"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle
+                          cx="8"
+                          cy="6.5"
+                          r="1.5"
+                          stroke="currentColor"
+                          strokeWidth="1.35"
+                        />
+                      </svg>
+                      <span>{PORTFOLIO.location}</span>
                       <span
                         aria-hidden="true"
-                        className="inline-block transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5 group-focus-visible:translate-x-0.5 motion-reduce:transition-none"
+                        className="inline-block text-xs transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
                       >
-                        →
+                        ↗
                       </span>
-                    </MotionLinkButton>
+                    </a>
+
+                    <span
+                      aria-hidden="true"
+                      className="hidden text-[var(--border)] sm:inline"
+                    >
+                      ·
+                    </span>
+
                     <div className="flex items-center gap-5">
                       <a
                         href={PORTFOLIO.githubUrl}

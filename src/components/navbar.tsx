@@ -97,6 +97,11 @@ export function Navbar() {
     const target = document.querySelector<HTMLElement>(href);
     if (!target) return;
     event.preventDefault();
+    window.dispatchEvent(
+      new CustomEvent("portfolio:navigate", {
+        detail: { href, id: id ?? (href === "#top" ? "top" : undefined) },
+      })
+    );
     navigateToSection(href, label, () => {
       if (lenis) {
         lenis.scrollTo(target, { offset: href === "#top" ? 0 : -72 });
